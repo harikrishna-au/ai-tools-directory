@@ -1,4 +1,5 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -34,6 +35,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/tools" element={<ToolsList />} />
+            <Route path="*" element={<Navigate to="/" />} />
             <Route path="/tools/text" element={<TextTools />} />
             <Route path="/tools/image" element={<ImageTools />} />
             <Route path="/voiceaitools" element={<VoiceAITools />} />
